@@ -6,4 +6,12 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   include DeviseTokenAuth::Concerns::User
+  validates :name, presence: true 
+  validates :email, presence: true
+  validates :cpf, presence: true
+  validates_uniqueness_of :cpf
+  validates :password, presence: true
+  validates :password_confirmation, presence: true
+
+  has_many :orders
 end
