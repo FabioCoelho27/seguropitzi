@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   
   namespace :user do
     namespace :v1 do
-      
+      resources :users
+      resources :orders
     end
   end
 end
