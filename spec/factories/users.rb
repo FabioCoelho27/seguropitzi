@@ -4,6 +4,6 @@ FactoryBot.define do
     email { Faker::Internet.email }
     password { "123456" }
     password_confirmation { "123456" }
-    cpf { Faker::CPF.numeric }
+    cpf { "098.654.456.52" }
   end
 end

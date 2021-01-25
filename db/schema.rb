@@ -18,8 +18,8 @@ ActiveRecord::Schema.define(version: 2021_01_23_224340) do
   create_table "orders", force: :cascade do |t|
     t.string "device_model"
     t.string "device_imei"
-    t.float "annual_price"
-    t.string "number_installments"
+    t.float "yearly_price"
+    t.string "installments"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

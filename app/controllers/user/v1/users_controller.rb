@@ -1,2 +1,4 @@
-class User::V1::UsersController < ApplicationController
+module User::V1
+  class UsersController < ApplicationController
+  end 
 end
