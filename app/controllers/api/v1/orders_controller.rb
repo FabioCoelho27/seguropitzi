@@ -1,13 +1,14 @@
 module Api::V1
-  class OrdersController < ApplicationController
+  class OrdersController < ApiController
+    
     before_action orders_params: [:create]
 
     def create
       @order = Order.new(orders_params)
       if @order.save
-        render json: @order, status: 201 
+        render json: { order: @order }, status: 201 
       else
-        render json: @order.errors.full_messages, status: 422
+        render json: { errors: @order.errors.full_messages }, status: 422
       end
     end
 
