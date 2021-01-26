@@ -4,7 +4,7 @@ class CreateOrders < ActiveRecord::Migration[6.0]
       t.string :device_model
       t.string :device_imei
       t.float :yearly_price
-      t.string :installments
+      t.integer :installments
       t.references :user, null: false, foreign_key: true
 
       t.timestamps

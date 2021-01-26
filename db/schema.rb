@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2021_01_23_224340) do
     t.string "device_model"
     t.string "device_imei"
     t.float "yearly_price"
-    t.string "installments"
+    t.integer "installments"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
